@@ -4,6 +4,13 @@ int C(char* A, char* B, size_t L) {
 	return memcmp(A, B, L);
 }
 
+Any ConstructAny(Any& In) {
+	Any A;
+	A.P = Duplicate(In.P);
+	A.S = In.S;
+	return A;
+}
+
 template<class T>
 Any ConstructAny(const T& In) {
 	Any A;
