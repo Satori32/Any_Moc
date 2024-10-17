@@ -42,9 +42,9 @@ T Max(T A, T B) {
 	return A > B ? A : B;
 }
 int Comp(Any& In, Any& B) {
-	return In.Comp(GETPointer(In.P), GETPointer(B.P), Max(In.S, In.S));
+	return In.Comp(GETPointer(In.P), GETPointer(B.P), In.S);
 }
 template<class T>
 int Comp(Any& In, T& B) {
-	return In.Comp(GETPointer(In.P), (char*)&B, sizeof(T));
+	return In.Comp(GETPointer(In.P), (char*)&B,in.S);
 }
